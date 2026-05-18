@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Import</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Navegaci�n principal">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.png" alt="Logo Global Import" width="120" />
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        Men�
+      </button>
+      <ul id="main-navigation" class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="registro.html">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h1>Bienvenido a Global Import</h1>
+      <p>Somos expertos en importaci�n y distribuci�n de tecnolog�a, indumentaria y art�culos del hogar.</p>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <p>Ofrecemos soluciones para importaci�n, log�stica y distribuci�n en toda la regi�n.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Consulta nuestros canales de atenci�n y cont�ctanos para recibir una propuesta personalizada.</p>
+    </section>
+  </main>
+    <section id="hero" class="hero">
+      <img src="assets/images/banner global import.png" alt="Banner de Global Import" />
+      <div class="hero-content">
+        <p>GlobalImport S.A.</p>
+        <h1>Importación y distribución confiable</h1>
+        <p>Comercio inteligente para tu negocio y tu hogar.</p>
+        <div class="hero-actions">
+          <a href="#servicios">Ver servicios</a>
+          <a href="registro.html">Registrar ahora</a>
+        </div>
+      </div>
+    </section>
+
+  <script>
+    const toggleButton = document.querySelector('.nav-toggle');
+    const navigation = document.getElementById('main-navigation');
+
+    if (toggleButton && navigation) {
+      toggleButton.addEventListener('click', () => {
+        const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+        toggleButton.setAttribute('aria-expanded', String(!expanded));
+        navigation.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
