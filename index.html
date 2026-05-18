@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Global Import</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -23,6 +27,19 @@
     </nav>
   </header>
 
+  <section id="hero" class="hero">
+    <img src="assets/images/banner global import.png" alt="Banner de Global Import" />
+    <div class="hero-content">
+      <p>GlobalImport S.A.</p>
+      <h1>Importaciï¿½n y distribuciï¿½n confiable</h1>
+      <p>Comercio inteligente para tu negocio y tu hogar.</p>
+      <div class="hero-actions">
+        <a href="#servicios">Ver servicios</a>
+        <a href="registro.html">Registrar ahora</a>
+      </div>
+    </div>
+  </section>
+
   <main>
     <section id="inicio">
       <h1>Bienvenido a Global Import</h1>
@@ -32,6 +49,44 @@
     <section id="servicios">
       <h2>Servicios</h2>
       <p>Ofrecemos soluciones para importaciï¿½n, logï¿½stica y distribuciï¿½n en toda la regiï¿½n.</p>
+            <div class="services-grid" role="list">
+        <article class="service-card service-electronica" role="listitem">
+          <div class="service-card-content">
+            <h3>Importación de Electrónica</h3>
+            <p>Selección y despacho de dispositivos electrónicos para comercio y consumo.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-indumentaria" role="listitem">
+          <div class="service-card-content">
+            <h3>Importación de Indumentaria y Accesorios</h3>
+            <p>Ropa y accesorios con control de calidad y servicios a medida.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-hogar" role="listitem">
+          <div class="service-card-content">
+            <h3>Importación de Artículos del Hogar</h3>
+            <p>Productos para el hogar con logística optimizada para distribuidores.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-logistica" role="listitem">
+          <div class="service-card-content">
+            <h3>Logística y Distribución</h3>
+            <p>Transporte, almacenamiento y distribución nacional e internacional.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="por-que-elegirnos">
+      <h2>Por que elegirnos?</h2>
+      <ul>
+        <li>Confianza y experiencia en importacion internacional.</li>
+        <li>Amplia red de proveedores y variedad de productos.</li>
+        <li>Soluciones logisticas eficientes adaptadas a tu negocio.</li>
+      </ul>
     </section>
 
     <section id="contacto">
@@ -39,18 +94,16 @@
       <p>Consulta nuestros canales de atenciï¿½n y contï¿½ctanos para recibir una propuesta personalizada.</p>
     </section>
   </main>
-    <section id="hero" class="hero">
-      <img src="assets/images/banner global import.png" alt="Banner de Global Import" />
-      <div class="hero-content">
-        <p>GlobalImport S.A.</p>
-        <h1>ImportaciÃ³n y distribuciÃ³n confiable</h1>
-        <p>Comercio inteligente para tu negocio y tu hogar.</p>
-        <div class="hero-actions">
-          <a href="#servicios">Ver servicios</a>
-          <a href="registro.html">Registrar ahora</a>
-        </div>
-      </div>
-    </section>
+
+  <footer>
+    <p>GlobalImport S.A. ï¿½ 2026</p>
+    <p>
+      <a href="#" aria-label="Facebook">Facebook</a> |
+      <a href="#" aria-label="Instagram">Instagram</a> |
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </p>
+    <p>Contacto: info@globalimport.example | +54 9 11 1234-5678</p>
+  </footer>
 
   <script>
     const toggleButton = document.querySelector('.nav-toggle');
@@ -66,3 +119,6 @@
   </script>
 </body>
 </html>
+
+
+
