@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="registro.css">
 </head>
 <body>
   <header>
@@ -32,19 +32,164 @@
       <h1>Registro</h1>
       <p>Completa el siguiente formulario para registrarte y recibir informaci�n.</p>
       <form action="#" method="post">
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" required />
+        <fieldset>
+          <legend>Sección A — Datos Personales</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="fecha-nacimiento">Fecha de nacimiento</label>
+              <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" required />
+            </div>
+            <div class="form-group">
+              <label for="rut">RUT / Número de documento</label>
+              <input type="text" id="rut" name="rut" required />
+            </div>
+            <div class="form-group">
+              <label for="genero">Género</label>
+              <select id="genero" name="genero" required>
+                <option value="">Selecciona una opción</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="no-binario">No binario</option>
+                <option value="prefiero-no-decir">Prefiero no decir</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="nacionalidad">Nacionalidad</label>
+              <select id="nacionalidad" name="nacionalidad" required>
+                <option value="">Selecciona un país</option>
+                <option value="argentina">Argentina</option>
+                <option value="chile">Chile</option>
+                <option value="brasil">Brasil</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="mexico">México</option>
+                <option value="colombia">Colombia</option>
+                <option value="peru">Perú</option>
+                <option value="espana">España</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
 
-        <label for="email">Correo electr�nico</label>
-        <input type="email" id="email" name="email" required />
+        <fieldset>
+          <legend>Sección B — Datos de Contacto y Acceso</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="email-confirm">Confirmar correo electrónico</label>
+              <input type="email" id="email-confirm" name="email_confirm" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-group">
+              <label for="password-confirm">Confirmar contraseña</label>
+              <input type="password" id="password-confirm" name="password_confirm" required />
+            </div>
+            <div class="form-group full-width">
+              <label for="password-strength">Fortaleza de contraseña</label>
+              <progress id="password-strength" max="100" value="0">Muy débil</progress>
+              <div id="password-strength-text" class="password-strength-text">Muy débil</div>
+            </div>
+            <div class="form-group full-width">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 11 1234-5678" required />
+            </div>
+          </div>
+        </fieldset>
 
-        <label for="telefono">Tel�fono</label>
-        <input type="tel" id="telefono" name="telefono" />
+        <fieldset>
+          <legend>Sección C — Dirección de Entrega</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pais-entrega">País</label>
+              <select id="pais-entrega" name="pais_entrega" required>
+                <option value="">Selecciona un país</option>
+                <option value="argentina">Argentina</option>
+                <option value="chile">Chile</option>
+                <option value="brasil">Brasil</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="mexico">México</option>
+                <option value="colombia">Colombia</option>
+                <option value="peru">Perú</option>
+                <option value="espana">España</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="provincia">Provincia / Estado</label>
+              <input type="text" id="provincia" name="provincia" required />
+            </div>
+            <div class="form-group">
+              <label for="ciudad">Ciudad</label>
+              <input type="text" id="ciudad" name="ciudad" required />
+            </div>
+            <div class="form-group">
+              <label for="calle">Calle y número</label>
+              <input type="text" id="calle" name="calle" required />
+            </div>
+            <div class="form-group">
+              <label for="codigo-postal">Código postal</label>
+              <input type="text" id="codigo-postal" name="codigo_postal" required />
+            </div>
+            <div class="form-group">
+              <label for="piso">Piso y departamento</label>
+              <input type="text" id="piso" name="piso" placeholder="Opcional" />
+            </div>
+            <div class="form-group full-width">
+              <label for="referencias">Referencia o instrucciones adicionales</label>
+              <textarea id="referencias" name="referencias" rows="4" maxlength="200" placeholder="Opcional"></textarea>
+            </div>
+          </div>
+        </fieldset>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        <fieldset>
+          <legend>Sección D — Preferencias y Términos</legend>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <p>Categorías de interés</p>
+              <label class="checkbox-inline"><input type="checkbox" name="intereses" value="electronica" /> Electrónica</label>
+              <label class="checkbox-inline"><input type="checkbox" name="intereses" value="indumentaria" /> Indumentaria</label>
+              <label class="checkbox-inline"><input type="checkbox" name="intereses" value="hogar" /> Hogar</label>
+              <label class="checkbox-inline"><input type="checkbox" name="intereses" value="otros" /> Otros</label>
+            </div>
+            <div class="form-group full-width">
+              <p>Tipo de cliente</p>
+              <label class="checkbox-inline"><input type="radio" name="tipo_cliente" value="consumidor_final" required /> Consumidor final</label>
+              <label class="checkbox-inline"><input type="radio" name="tipo_cliente" value="revendedor" /> Revendedor</label>
+              <label class="checkbox-inline"><input type="radio" name="tipo_cliente" value="empresa" /> Empresa</label>
+            </div>
+            <div class="form-group full-width">
+              <label for="como-nos-conociste">¿Cómo nos conociste?</label>
+              <select id="como-nos-conociste" name="como_nos_conociste" required>
+                <option value="">Selecciona una opción</option>
+                <option value="redes_sociales">Redes sociales</option>
+                <option value="recomendacion">Recomendación</option>
+                <option value="busqueda_web">Búsqueda web</option>
+                <option value="publicidad">Publicidad</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label class="checkbox-inline"><input type="checkbox" name="newsletter" value="si" /> Suscripción al newsletter</label>
+              <label class="checkbox-inline"><input type="checkbox" name="terminos" required /> Acepto los Términos y Condiciones</label>
+              <label class="checkbox-inline"><input type="checkbox" name="privacidad" required /> Acepto la Política de Privacidad</label>
+            </div>
+          </div>
+        </fieldset>
 
-        <button type="submit">Enviar registro</button>
+        <div class="form-actions">
+          <button type="submit">Registrarme</button>
+          <button type="reset">Limpiar formulario</button>
+        </div>
+
+        <p class="login-link">Ya tengo cuenta, <a href="#">iniciar sesión</a>.</p>
       </form>
     </section>
   </main>
@@ -60,6 +205,42 @@
         navigation.classList.toggle('open');
       });
     }
-  </script>
+    const passwordInput = document.getElementById('password');
+    const strengthBar = document.getElementById('password-strength');
+    const strengthText = document.getElementById('password-strength-text');
+
+    function calculatePasswordStrength(password) {
+      let score = 0;
+      if (!password) return score;
+
+      if (password.length >= 8) score += 20;
+      if (password.length >= 12) score += 15;
+      if (/[a-z]/.test(password)) score += 15;
+      if (/[A-Z]/.test(password)) score += 15;
+      if (/[0-9]/.test(password)) score += 15;
+      if (/[^A-Za-z0-9]/.test(password)) score += 20;
+      if (password.length >= 16) score += 10;
+      return Math.min(score, 100);
+    }
+
+    function updatePasswordStrength() {
+      const value = calculatePasswordStrength(passwordInput.value);
+      strengthBar.value = value;
+
+      if (value < 30) {
+        strengthText.textContent = 'Muy débil';
+      } else if (value < 60) {
+        strengthText.textContent = 'Débil';
+      } else if (value < 80) {
+        strengthText.textContent = 'Buena';
+      } else {
+        strengthText.textContent = 'Excelente';
+      }
+    }
+
+    if (passwordInput) {
+      passwordInput.addEventListener('input', updatePasswordStrength);
+      updatePasswordStrength();
+    }  </script>
 </body>
 </html>
