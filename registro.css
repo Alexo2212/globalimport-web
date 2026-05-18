@@ -333,3 +333,20 @@ button[type="reset"]:hover {
     width: 100%;
   }
 }
+
+/* Estilos de validación */
+.campo-error {
+  border-color: #e74c3c !important;
+}
+
+.campo-ok {
+  border-color: #2ecc71 !important;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+}
